@@ -18,6 +18,7 @@ body {
     grid-auto-rows: 40px;
     grid-template-columns: 40px 1fr;
     gap: 5px;
+    z-index: 2; /* to keep the shadow on main-content only */
 }
 
 .sidebar-top {
@@ -112,6 +113,7 @@ div>p {
 }
 
 .cardtitle {
+    font-size: 24px;
     grid-column: span 2;
     align-self: flex-end;
 }
@@ -121,6 +123,14 @@ div>p {
     box-shadow: 5px 5px 5px darkblue;
     background: linear-gradient(90deg,rgb(255, 170, 0) 0%, rgb(255, 170, 0) 8px, rgb(255, 255, 255) 8px, rgba(255, 255, 255) 100%);
     position: relative;
+    padding: 20px;
+    overflow: auto;
+}
+
+.card p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 
 .card-buttons {
@@ -143,7 +153,22 @@ div>p {
     box-shadow: 5px 5px 5px darkblue;
     background: white;
     display: grid;
+    grid-auto-rows: auto;
     padding: 20px;
+    font-size: 10px;
+    color: gray;
+}
+
+.card2 p {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 3px;
+    font-size: 12px;
+    color: black;
+}
+
+.card2>div:first-child>p {
+    margin-top: 0;
 }
 
 .card2 > * {
@@ -171,10 +196,15 @@ div>p {
     gap: 20px;
     overflow: auto;
     align-items: center;
+    font-size: 12px;
 }
 
 .card3-icon {
     width: 100%;
     aspect-ratio: 1 / 1;
     border-radius: 100%;
+}
+
+.card3 div>p:last-child {
+    color: gray;
 }
